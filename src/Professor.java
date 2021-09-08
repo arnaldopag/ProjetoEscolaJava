@@ -1,10 +1,12 @@
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Professor extends Pessoas{
     private int codProfessor;
     private Date dataContrato;
     private String titulacao;
+    private ArrayList<Disciplinas> materias;
 
     public Professor(int idPessoa, String nome, Date nascimento, String fone, String cpf, String email, int codProfessor, Date dataContrato, String titulacao) {
         super(idPessoa, nome, nascimento, fone, cpf, email);
@@ -35,5 +37,13 @@ public class Professor extends Pessoas{
 
     public void setTitulacao(String titulacao) {
         this.titulacao = titulacao;
+    }
+
+    public ArrayList<Disciplinas> getMaterias() {
+        return materias;
+    }
+
+    public void setMaterias(ArrayList<Disciplinas> materias) {
+        this.materias = materias;
     }
 }
